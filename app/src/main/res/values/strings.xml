@@ -1,12 +1,23 @@
 <resources>
     <string name="app_name">MyCocktails</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
 
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="cocktail_list_title">My cocktails</string>
+    <string name="cocktail_list_first_item_hint">Add your first\ncocktail here</string>
+    <string name="cocktail_item_detail_title">Cocktail detail</string>
+    <string name="cocktail_item_new_title">Create new item\n</string>
+    <string name="cocktail_detail_edit_button">Edit</string>
+    <string name="recipe_title">Recipe:</string>
+    <string name="add_new_cocktail_description">Add description</string>
+    <string name="add_new_cocktail_title">Add title</string>
+    <string name="add_new_cocktail_recipe">Add recipe</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="add_new_ingredient_title">Set title for ingredient</string>
+    <string name="add_ingredient_count">Set count</string>
+    <string name="msg_should_be_set">Should be filled</string>
+    <string name="item_save">Item was saved</string>
+    <string name="msg_please_check_and_try_again">Please check your data and try again</string>
+    <string name="msg_please_add_one_igredient_as_least">Please add as least one ingredient item</string>
+    <string name="edit_cocktail_title">Edit cocktail</string>
 </resources>

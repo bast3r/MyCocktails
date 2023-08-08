@@ -3,26 +3,59 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/cocktailListFragment">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="by.dazerty.mycocktails.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/cocktailListFragment"
+        android:name="by.dazerty.mycocktails.presentation.fragment.CocktailListFragment"
+        android:label="@string/cocktail_list_title"
+        tools:layout="@layout/fragment_cocktail_list">
 
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/cocktailListFragment_to_cocktailDetailFragment"
+            app:destination="@id/cocktailDetailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
+        <action
+            android:id="@+id/cocktailListFragment_to_newCocktailFragment"
+            app:destination="@id/newCocktailFragment"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="by.dazerty.mycocktails.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
+        android:id="@+id/cocktailDetailFragment"
+        android:name="by.dazerty.mycocktails.presentation.fragment.CocktailDetailFragment"
+        android:label="@string/cocktail_item_detail_title"
+        tools:layout="@layout/fragment_cocktail_detail">
+
+        <argument
+            android:name="argument_cocktail_id"
+            app:argType="string"
+            app:nullable="false" />
+        <action
+            android:id="@+id/cocktailDetailFragment_to_cocktailListFragment"
+            app:destination="@id/cocktailListFragment" />
 
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/cocktailDetailFragment_to_newCocktailFragment"
+            app:destination="@id/newCocktailFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/newCocktailFragment"
+        android:name="by.dazerty.mycocktails.presentation.fragment.CreateCocktailFragment"
+        android:label="@string/cocktail_item_new_title"
+        tools:layout="@layout/fragment_create_cocktail">
+
+        <argument
+            android:name="argument_cocktail_id"
+            app:argType="string"
+            app:nullable="true" />
+
+        <action
+            android:id="@+id/action_newCocktailFragment_to_cocktailListFragment"
+            app:destination="@id/cocktailListFragment" />
     </fragment>
 </navigation>
