@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_gravity="center_horizontal"
-    android:layout_margin="5dp">
+    android:layout_height="200dp"
+    android:layout_gravity="center|top"
+    app:cardCornerRadius="50dp"
+    app:layout_constraintDimensionRatio="1:1"
+    android:padding="15dp"
+    android:layout_margin="15dp">
 
-    <com.google.android.material.imageview.ShapeableImageView
+    <ImageView
         android:id="@+id/item_image"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="centerInside"
-        android:scaleX="1"
-        android:scaleY="1"
+        android:layout_height="195dp"
+        android:scaleType="center"
         android:src="@drawable/test_img_1"
         app:shapeAppearance="@style/CornerSize10Percent" />
 
@@ -27,4 +28,4 @@
         android:textColor="@color/white"
         tools:text="Test item" />
 
-</FrameLayout>
+</androidx.cardview.widget.CardView>

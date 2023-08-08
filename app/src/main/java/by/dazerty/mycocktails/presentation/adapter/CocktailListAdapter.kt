@@ -39,18 +39,19 @@ class CocktailListAdapter: ListAdapter<CocktailModel, CocktailListAdapter.Cockta
                     binding.itemImage.setImageResource(R.drawable.test_img_2)
                 }
             }
+
+            //TODO margins between cardview
         }
     }
 
     class CocktailDiffUtils: DiffUtil.ItemCallback<CocktailModel>() {
 
         override fun areItemsTheSame(oldItem: CocktailModel, newItem: CocktailModel): Boolean {
-            return oldItem.title == newItem.title
+            return oldItem.id == newItem.id
         }
 
         override fun areContentsTheSame(oldItem: CocktailModel, newItem: CocktailModel): Boolean {
             return oldItem == newItem
         }
-
     }
 }
